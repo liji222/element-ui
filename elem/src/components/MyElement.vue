@@ -61,6 +61,34 @@
         </div>
 
         <div class="demo-list">
+            <h4>下拉菜单</h4>
+            <div class="demo-item">
+                <el-select v-model="dropValue" placeholder="请选择">
+                    <el-option
+                            v-for="item in options"
+                            :key="item.dropValue"
+                            :label="item.label"
+                            :value="item.dropValue">
+                    </el-option>
+                </el-select>
+            </div>
+        </div>
+
+        <div class="demo-list">
+            <h4>单选按钮</h4>
+            <div class="demo-item">
+
+            </div>
+        </div>
+
+        <div class="demo-list">
+            <h4>单选按钮</h4>
+            <div class="demo-item">
+
+            </div>
+        </div>
+
+        <div class="demo-list">
             <h4>单选按钮</h4>
             <div class="demo-item">
 
@@ -79,7 +107,24 @@
                 radio3: '上海',
                 checked: true,
                 checkList: ['选中且禁用','复选框 A'],
-                input: '龙珠激斗'
+                input: '龙珠激斗',
+                options: [{
+                    value: '选项1',
+                    label: '黄金糕'
+                }, {
+                    value: '选项2',
+                    label: '双皮奶'
+                }, {
+                    value: '选项3',
+                    label: '蚵仔煎'
+                }, {
+                    value: '选项4',
+                    label: '龙须面'
+                }, {
+                    value: '选项5',
+                    label: '北京烤鸭'
+                }],
+                dropValue: ''
             };
         }
     }
