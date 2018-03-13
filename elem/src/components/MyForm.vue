@@ -44,26 +44,28 @@
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                form: {
-                    strategyName: '',
-                    datatype: '',
-                    collectType: '',
-                    examin: '',
-                    dataSystem: []
-                }
-            }
-        },
-        methods: {
-            onSubmit() {
-                console.log('submit!');
-                console.log(this.form);
-            }
-        }
+export default {
+  data() {
+    return {
+      form: {
+        strategyName: "",
+        datatype: "",
+        collectType: "",
+        examin: "",
+        dataSystem: []
+      }
+    };
+  },
+  methods: {
+    onSubmit() {
+      console.log("submit!");
+      console.log(this.form);
     }
+  }
+};
 </script>
 
+
 <style>
+
 </style>
