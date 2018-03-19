@@ -12,34 +12,12 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 
 export default {
   data() {
     return {
-      tableData: [
-        {
-          date: "2016-05-02",
-          name: "王小虎",
-          address:
-            "上海市普陀区金沙江路 1518 弄 杀戮空间发啊阿吉拉废旧塑料防守打法啥地方撒豆分身斧就说的"
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄"
-        },
-        {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄"
-        },
-        {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄"
-        }
-      ],
+      tableData: [],
       multipleSelection: []
     };
   },
@@ -48,14 +26,24 @@ export default {
       this.multipleSelection = val;
     },
     showData() {
-      axios
-        .get("./static/test.json")
-        .then(function(response) {
-          console.log(response);
-        })
-        .catch(function(error) {
+      this.$axios.get("./static/test.json").then(
+        res => {
+          console.log(res);
+          this.tableData = res.data;
+        },
+        error => {
           console.log(error);
-        });
+        }
+      );
+
+      // this.$axios
+      //   .get("./static/test.json")
+      //   .then(function(res) {
+      //     console.log(res);
+      //   })
+      //   .catch(function(error) {
+      //     console.log(error);
+      //   });
     }
   }
 };

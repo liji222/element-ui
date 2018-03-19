@@ -3,7 +3,7 @@ import Router from "vue-router";
 import HelloWorld from "@/components/HelloWorld";
 import MyElement from "@/components/MyElement";
 import MyForm from "@/components/MyForm";
-import MyTable from "@/components/MyTable";
+import MyTable from "../components/MyTable";
 
 Vue.use(Router);
 
