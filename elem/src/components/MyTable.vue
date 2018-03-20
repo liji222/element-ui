@@ -35,16 +35,18 @@ export default {
           console.log(error);
         }
       );
-
-      // this.$axios
-      //   .get("./static/test.json")
-      //   .then(function(res) {
-      //     console.log(res);
-      //   })
-      //   .catch(function(error) {
-      //     console.log(error);
-      //   });
     }
+  },
+  mounted() {
+    this.$axios.get("./static/initdata.json").then(
+      res => {
+        console.log(res);
+        this.tableData = res.data;
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 };
 </script>
