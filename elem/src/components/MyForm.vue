@@ -1,14 +1,5 @@
 <template>
-    <div>
-        <el-tabs v-model="activeName" @tab-click="handleClick">
-            <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-            <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-            <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-            <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-        </el-tabs>
-
-        <el-form ref="form" :model="form" label-width="80px">
-
+    <el-form ref="form" :model="form" label-width="80px">
         <el-form-item label="策略名称">
             <el-input v-model="form.strategyName"></el-input>
         </el-form-item>
@@ -30,7 +21,7 @@
 
         <el-form-item label="是否考核">
             <el-radio-group v-model="form.examin">
-                <el-radio label="是(进行收集统计)"></el-radio>
+                <el-radio label="是">(进行收集统计)</el-radio>
                 <el-radio label="否"></el-radio>
             </el-radio-group>
         </el-form-item>
@@ -49,38 +40,32 @@
             <el-button>取消</el-button>
         </el-form-item>
     </el-form>
-    </div>
-
 </template>
 
 <script>
 export default {
+  props: ["msg"],
   data() {
     return {
-      activeName: "second",
       form: {
-        strategyName: "",
-        datatype: "",
-        collectType: "",
-        examin: "",
-        dataSystem: []
+        strategyName: this.msg.strategyName,
+        datatype: this.msg.datatype,
+        collectType: this.msg.collectType,
+        examin: this.msg.examin,
+        dataSystem: this.msg.dataSystem
       },
       initdata: []
     };
   },
   methods: {
     onSubmit() {
-      console.log("submit!");
       console.log(this.form);
-    },
-    handleClick(tab, event) {
-      console.log(tab, event);
     }
   },
   mounted() {
     this.$axios.get("./static/strategy/getCollectStrategy.json").then(
       res => {
-        console.log(res);
+        // console.log(res);
         this.initdata = res.data;
       },
       error => {
@@ -90,7 +75,6 @@ export default {
   }
 };
 </script>
-
 
 <style>
 

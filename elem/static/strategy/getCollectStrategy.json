@@ -1,14 +1,14 @@
 [
   {
-    "strategyName": "收集策略一",
+    "strategyName": "收集策略二",
     "datatype": "文件",
     "collectType": "通知",
     "examin": "是",
     "dataSystem": ["数据存储管理系统", "数据加工处理系统", "业务协同平台"]
   },
   {
-    "strategyName": "收集策略二",
-    "datatype": "字符",
+    "strategyName": "收集策略一",
+    "datatype": "字符串",
     "collectType": "通知",
     "examin": "否",
     "dataSystem": ["数据加工处理系统", "业务协同平台"]

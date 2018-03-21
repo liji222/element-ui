@@ -5,6 +5,8 @@ import MyElement from "@/components/MyElement";
 import MyForm from "@/components/MyForm";
 import MyTable from "../components/MyTable";
 
+import ToggleTabs from "../components/Toggletabs";
+
 Vue.use(Router);
 
 export default new Router({
@@ -18,6 +20,11 @@ export default new Router({
       path: "/table",
       name: "MyTable",
       component: MyTable
+    },
+    {
+      path: "/tabs",
+      name: "ToggleTabs",
+      component: ToggleTabs
     },
     {
       path: "/form",
