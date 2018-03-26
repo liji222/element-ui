@@ -27,9 +27,9 @@ export default new Router({
       component: ToggleTabs
     },
     {
-      path: "/form",
-      name: "MyForm",
-      component: MyForm
+      path: "/demo",
+      name: "MyElement",
+      component: MyElement
     },
     {
       path: "/help",

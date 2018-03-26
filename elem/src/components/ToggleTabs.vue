@@ -7,6 +7,8 @@
 
             </el-tab-pane>
 
+            <el-button @click="add()">添加策略</el-button>           
+
         </el-tabs>
 </template>
 
@@ -22,8 +24,20 @@ export default {
   },
   methods: {
     handleClick(tab, event) {
-      //   console.log(tab);
-      //   console.log(this.initdata);
+      // console.log(tab);
+      // console.log(event);
+      // console.log(this.initdata);
+    },
+    add() {
+      alert("add new tab");
+      console.log(this.initdata);
+      this.initdata.push({
+        strategyName: "",
+        datatype: "",
+        collectType: "",
+        examin: "",
+        dataSystem: []
+      });
     }
   },
   mounted() {

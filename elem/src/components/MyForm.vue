@@ -60,6 +60,7 @@ export default {
   methods: {
     onSubmit() {
       console.log(this.form);
+      console.log(this.$data);
     }
   },
   mounted() {
