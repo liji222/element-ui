@@ -1,4 +1,5 @@
 <template>
+    <div class="content">
         <el-tabs v-model="activeName" @tab-click="handleClick" type="border-card">
 
             <el-tab-pane v-for="(item, index) in initdata" :key="index" :label="item.strategyName" :name="item.strategyName">
@@ -10,6 +11,7 @@
             <el-button @click="add()">添加策略</el-button>           
 
         </el-tabs>
+    </div>
 </template>
 
 <script>

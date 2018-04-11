@@ -5,6 +5,8 @@ import MyElement from "@/components/MyElement";
 import MyForm from "@/components/MyForm";
 import MyTable from "../components/MyTable";
 
+import SubRouter from "@/components/SubRouter";
+
 import ToggleTabs from "../components/Toggletabs";
 
 Vue.use(Router);
@@ -16,6 +18,7 @@ export default new Router({
       name: "MyElement",
       component: MyElement
     },
+
     {
       path: "/table",
       name: "MyTable",
@@ -35,6 +38,11 @@ export default new Router({
       path: "/help",
       name: "HelloWorld",
       component: HelloWorld
+    },
+    {
+      path: "/:module",
+      name: "SubRouter",
+      component: SubRouter
     }
   ]
 });

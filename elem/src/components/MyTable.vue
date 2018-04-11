@@ -1,14 +1,13 @@
 <template>
-<div>
-  <el-table :data="tableData" stripe border @selection-change="handleSelectionChange">
-      <el-table-column type="selection"></el-table-column>
-      <el-table-column prop="date" label="日期" width="100"></el-table-column>
-      <el-table-column prop="name" label="姓名" width="200"></el-table-column>
-      <el-table-column prop="address" label="地址" width=""></el-table-column>
-    </el-table>
-  <el-button type="primary" @click="showData">GET</el-button>
-</div>
-    
+  <div class="content">
+    <el-table :data="tableData" stripe border @selection-change="handleSelectionChange">
+        <el-table-column type="selection"></el-table-column>
+        <el-table-column prop="date" label="日期" width="100"></el-table-column>
+        <el-table-column prop="name" label="姓名" width="200"></el-table-column>
+        <el-table-column prop="address" label="地址" width=""></el-table-column>
+      </el-table>
+    <el-button type="primary" @click="showData">GET</el-button>
+  </div>
 </template>
 
 <script>
