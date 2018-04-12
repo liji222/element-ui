@@ -6,7 +6,8 @@
                 <el-menu-item 
                     v-for="data in initRoutData" 
                     :key="data.mainRouterId" 
-                    :name="data.mainRouterName">
+                    :name="data.mainRouterName"
+                    :index="data.mainRouterId">
                     {{ data.mainRouterName }}
                 </el-menu-item>
 
@@ -30,13 +31,13 @@ export default {
   data() {
     return {
       initRoutData: [],
-      activeMainRoutes: "2",
+      activeMainRoutes: "config",
       activeSubRoutes: ""
     };
   },
   methods: {
     handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
     }
   },
   mounted() {

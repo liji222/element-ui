@@ -1,26 +1,26 @@
 [
   {
     "mainRouterName": "实时监视",
-    "mainRouterId": "1"
+    "mainRouterId": "monitor"
   },
   {
     "mainRouterName": "统计分析",
-    "mainRouterId": "2"
+    "mainRouterId": "static"
   },
   {
     "mainRouterName": "综合查询",
-    "mainRouterId": "3"
+    "mainRouterId": "query"
   },
   {
     "mainRouterName": "任务管理",
-    "mainRouterId": "4"
+    "mainRouterId": "task"
   },
   {
     "mainRouterName": "数据管理",
-    "mainRouterId": "5"
+    "mainRouterId": "data"
   },
   {
     "mainRouterName": "配置管理",
-    "mainRouterId": "6"
+    "mainRouterId": "config"
   }
 ]

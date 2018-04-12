@@ -30,14 +30,17 @@
 export default {
   name: "SubRouter",
   data() {
-    return {};
+    return {
+      routeParams: this.$route.params.module
+    };
   },
   methods: {
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+      //   console.log(key, keyPath);
+      console.log(this.routeParams);
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
+      //   console.log(key, keyPath);
     }
   }
 };
